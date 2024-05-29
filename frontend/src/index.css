@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+.custom-ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.custom-li {
+    flex: 0 0 calc(10% - 10px); /* Five items per row with some spacing */
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.custom-li:hover {
+    background-color: #e9e9e9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .custom-li {
+        flex-basis: calc(25% - 20px); /* Four items per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .custom-li {
+        flex-basis: calc(33.333% - 20px); /* Three items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-li {
+        flex-basis: calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-li {
+        flex-basis: calc(100% - 20px); /* Single item per row */
+    }
+}
